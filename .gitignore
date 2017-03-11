@@ -1,0 +1,7 @@
+!.gitignore
+/target/*
+/.idea/*
+*.iml
+/webgame-dal/target/*
+/webgame-service/target/*
+/webgame-web/target/*
