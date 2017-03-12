@@ -16,6 +16,11 @@
             classpath*:application-web.xml
         </param-value>
     </context-param>
+    <!--配置profile-->
+    <!--<context-param>-->
+        <!--<param-name>spring.profiles.default</param-name>-->
+        <!--<param-value>dev</param-value>-->
+    <!--</context-param>-->
     <!-- 解决工程编码过滤器 -->
     <filter>
         <filter-name>characterEncodingFilter</filter-name>
@@ -41,6 +46,10 @@
             <param-name>contextConfigLocation</param-name>
             <param-value>classpath*:springmvc-servlet.xml</param-value>
         </init-param>
+        <!--<init-param>-->
+            <!--<param-name>spring.profiles.default</param-name>-->
+            <!--<param-value>dev</param-value>-->
+        <!--</init-param>-->
     </servlet>
     <servlet-mapping>
         <servlet-name>springmvc</servlet-name>

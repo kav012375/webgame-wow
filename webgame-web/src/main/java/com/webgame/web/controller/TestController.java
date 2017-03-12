@@ -1,8 +1,9 @@
 package com.webgame.web.controller;
 
+import javax.servlet.http.HttpServletResponse;
+
 import com.webgame.service.test.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,5 +22,14 @@ public class TestController {
     @RequestMapping(value = "/test1")
     public String testing(){
         return testService.getTest();
+    }
+    @RequestMapping(value = "/test2")
+    public String tested(HttpServletResponse response){
+        try{
+            response.sendRedirect("/pages/test.html");
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return "redirect:/pages/test.html";
     }
 }
